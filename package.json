@@ -1,0 +1,17 @@
+{
+  "name": "prompt-firewall-proxy-kit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Screen a prompt before it reaches your model: injection patterns, hidden characters, personal data and secrets, with an allow, review or block verdict.",
+  "author": "Caelara Labs <ops@caelaralabs.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "wrangler pages dev public",
+    "deploy": "wrangler pages deploy public",
+    "test": "node --test test/"
+  },
+  "devDependencies": {
+    "wrangler": "^3.80.0"
+  }
+}

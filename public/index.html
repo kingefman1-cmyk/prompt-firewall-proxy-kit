@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prompt Firewall</title>
+<meta name="description" content="Screen a prompt before it reaches your model: injection patterns, hidden characters, personal data and secrets, with an allow, review or block verdict.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><strong id="brand">Prompt Firewall</strong></div></header>
+<main class="wrap">
+  <section class="hero">
+    <h1>Screen a prompt before your model sees it.</h1>
+    <p class="sub">Paste text and get a verdict with the findings behind it. The same endpoint can sit in front of your own app as a screening step.</p>
+    <form id="f" autocomplete="off"><noscript>This page needs JavaScript to run.</noscript></form>
+    <p id="status" class="status" role="status"></p>
+  </section>
+  <section id="out" hidden>
+    <div class="card">
+      <h2>Result</h2>
+      <div id="pills"></div>
+      <details><summary>Full response</summary><pre id="raw"></pre></details>
+      <p class="muted">Heuristic screening: a clean verdict is not proof that text is safe, and a block is a signal to review, not a ruling.</p>
+    </div>
+  </section>
+</main>
+<footer class="wrap muted foot">Data by <a href="https://caelaralabs.com" rel="noopener">Caelara Labs</a>. Heuristic checks: a clean result is not a guarantee.</footer>
+<script type="module" src="/app.js"></script>
+</body>
+</html>
