@@ -1,3 +1,5 @@
+[![Powered by Caelara Labs](https://benchmarks.caelaralabs.com/verify/powered-by.svg)](https://caelaralabs.com)
+
 # Prompt Firewall (white-label starter)
 
 A small Cloudflare Pages site that screens text with Caelara Shield before it reaches a model. It returns an allow, review or block verdict, a risk score and the findings behind them, and can return a redacted copy of the text.
