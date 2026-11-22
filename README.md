@@ -70,6 +70,18 @@ By default only pages served by the same site may call the API, so other sites c
 | `public/` | The static page, script and styles |
 | `test/` | Unit tests: `npm test` |
 
+## Optional: boot preflight with Caelara Shield
+
+If this kit runs inside a bot or an agent, you can clear its instructions and tools once at start-up. Caelara Shield screens the
+system prompt and tool descriptions for injection, tool poisoning and embedded secrets, and returns a `clearance_id` (a SHA-256
+audit receipt anyone can verify). Send it as `X-Caelara-Clearance` on later Caelara calls.
+
+```bash
+curl -s -X POST https://shield.caelaralabs.com/v1/shield/preflight   -H "X-Caelara-Key: $CAELARA_KEY" -H "Content-Type: application/json"   -d '{"agent":"my-bot","system_prompt":"You summarise invoices.","tools":["read_invoice"]}'
+```
+
+It costs 0.005 USDC per run (or one call on a Caelara key) and is opt-in: the kit works unchanged without it.
+
 ## License
 
 MIT. See `LICENSE`.
